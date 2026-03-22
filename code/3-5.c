@@ -7,7 +7,10 @@ void my_sum(char type, int count, ...) {
     if (type == 'S') {
         for (int i = 0; i < count; i++) {
             char *str = va_arg(args, char *);
-            printf("%s ", str);
+            printf("%s", str);
+            if (i < count - 1) {
+                printf(" ");
+            }
         }
         printf("\n");
     } else if (type == 'C') {
@@ -29,6 +32,6 @@ void my_sum(char type, int count, ...) {
 int main() {
     my_sum('S', 2, "Hello", "World");
     my_sum('C', 3, 'C', 'N', 'U');
-    my_sum('D', 3, 10, 20, 30);
+    my_sum('D', 4, 10, 20, 30, 40);
     return 0;
 }
