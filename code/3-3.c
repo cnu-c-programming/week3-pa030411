@@ -13,7 +13,8 @@ int average(int count, ...) {
 }
 
 int main() {
-    printf("%d\n", average(3, 10, 20, 30));
-    printf("%d\n", average(4, 20, 30, 40, 50));
+    printf("%d\n", average(2, 10, 30));
+    printf("%d\n", average(3, 20, 30, 40));
     return 0;
 }
+
